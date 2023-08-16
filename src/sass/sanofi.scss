@@ -1,0 +1,609 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf") format("opentype");
+  }
+@font-face {
+  font-family: "MuseoSans";
+  src: url("../fonts/MuseoSans-900.otf") format("opentype");
+  }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@mixin img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}  
+
+@keyframes slideright {
+  from {
+    opacity: 0.3;
+    transform: translateX(100px);
+   
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+   
+  }
+}
+
+@keyframes slideleft {
+  from {
+    opacity: 0.3;
+    transform: translateX(-100px);
+   
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+   
+  }
+}
+$regular: 'Monsterrat';
+$title: 'MuseoSans';
+$main-color: #a1bd39;
+$main-dark: #19428f;
+$main-light: #1b4a97;
+$secondary-color: #e4022e;
+
+$text: #fff;
+$text-blue: #1f57a4;
+$text-black: #000;
+
+.fdb-block {
+  margin-top: 0 !important;
+  padding: 0 0 1.5rem 0 !important;
+}
+#es-rc.es-rc {
+  font-family: $regular;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  // color: $text;
+  background: #1f57a4;
+  .es-mobile-break {
+    display: block;
+  }
+  .es-image-box {
+    overflow: hidden;
+  }
+  .es-zoomin {
+    opacity: 1;
+    transition: 0.3s;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .es-kv {
+    min-height: 300px;
+    &__container {
+      padding: 0 !important;
+    }
+    &__title {
+      position: absolute;
+      top: 30px;
+      left: 15px;
+      animation: slideleft 1s ease forwards;
+    }
+    &__text{
+      color: $text;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 10px !important;
+      font-family: $title;
+      line-height: 0.8;
+      font-size: 18px;
+      p{
+          // margin: 10px;
+          letter-spacing: 1px;
+      }
+      &--green{
+          color: $main-color;
+      }
+      &__sup {
+        position: relative;
+        font-size: 10px !important;
+        top: -10px;
+      }
+    }
+    &__packshot {
+      width: 45%;
+      position: absolute;
+      bottom: -10%;
+      left: 5%;
+      animation: slideleft 1s ease forwards;
+    }
+    &__background {
+      width: 100%;
+      position: absolute;
+      bottom: -10%;
+      right: 0;
+    }
+  }
+  .es-features {
+    &__box {
+      
+    }
+    &__title {
+      font-size: 22px !important;
+      color: $text-blue !important;
+      max-width: 210px !important;
+    }
+    &__desc {
+      font-size: 16px !important;
+      color: $text-black !important;
+      max-width: 210px !important;
+    }
+  }
+  .es-description {
+    background-image: url('../images/description-bg.png');
+    &__title {
+      width: 100%;
+      text-align: center !important;
+      animation: slideleft 1s ease forwards;
+    }
+    &__text{
+      text-align: center;
+      color: $text;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-1.5deg);
+      margin: 0 auto 10px !important;
+      font-size: 30px;
+      border-radius: 5px;
+      font-family: $title;
+      line-height: 0.8;
+      p{
+          // margin: 10px;
+          letter-spacing: 1px;
+      }
+      &--blue{
+        font-size: 25px;
+        background-color: $main-color;
+        transform: rotate(-3deg);
+        line-height: 1.3;
+        position: relative;
+        left: -40px;
+      }
+      &--middle{
+        line-height: 0.8;
+        position: relative;
+        left: 40px;
+      }
+    }
+    &__text1 {
+      font-size: 18px !important;
+      color: $text !important;
+    }
+    &__text2 {
+      font-size: 24px !important;
+      color: $text !important;
+      text-shadow: 0px 0px 50px $main-color !important;
+    }
+    &__box {
+      background: linear-gradient(45deg, rgba(49,117,182,1) 0%, rgba(26,69,145,1) 25%, rgba(26,69,145,1) 75%, rgba(49,117,182,1) 100%);
+      box-shadow: 2px 2px 5px 0px rgba(47, 47, 47, 1) !important;
+    }
+    &__subtitle {
+      color: $text !important;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-3deg);
+      margin-bottom: 10px !important;
+      font-size: 24px !important;
+      border-radius: 5px;
+      font-family: $title;
+      line-height: 1.3;
+      margin: 0 auto 10px !important;
+      background-color: $secondary-color;
+    }
+  }
+  .es-why {
+    &__title {
+      width: 100%;
+      text-align: center !important;
+      animation: slideleft 1s ease forwards;
+    }
+    &__text{
+      text-align: center;
+      color: $text-blue;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-3deg);
+      margin: 0 auto 10px !important;
+      font-size: 20px;
+      border-radius: 5px;
+      font-family: $title;
+      line-height: 1.1;
+      p{
+          // margin: 10px;
+          letter-spacing: 1px;
+      }
+      &--red{
+        color: $text;
+        padding: 0 10px !important;
+        background-color: $secondary-color;
+        
+      }
+      &--1 {
+        position: relative;
+        left: -35%;
+      }
+      &--2 {
+        
+      }
+      &--3 {
+        position: relative; 
+        left: 13%;
+        font-size: 25px;
+        transform: rotate(-1.5deg);
+        line-height: 1.3;
+      }
+    }
+  } 
+  .es-dose {
+    background-color: $text-blue;
+    & table {
+      padding: 0 !important;
+      margin: 0 !important;
+      border-color: transparent !important;
+    }
+    &__odd {
+      background-color: $main-dark !important;
+    }
+    &__even {
+      background-color: $main-light !important;
+    }
+    &__box {
+      padding: 0 !important;
+      background-color: $main-dark;
+    }
+    &__subtitle {
+      color: $text !important;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-3deg);
+      margin-bottom: 10px !important;
+      font-size: 35px !important;
+      border-radius: 5px;
+      font-family: $title;
+      line-height: 1.3;
+      margin: 0 auto 10px !important;
+      background-color: $secondary-color;
+    }
+    & td {
+      color: $text;
+      text-align: left;
+      border:none;
+    }
+  } 
+  .es-video {
+    margin: 0 auto 64px;
+    width: 100%;
+    position: relative;
+    &__container {
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    &__iframe {
+      border: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    &__title {
+      animation: slideleft 1s ease forwards;
+    }
+    &__text{
+      text-align: center;
+      color: $text-blue;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-3deg);
+      margin: 0 auto 10px !important;
+      font-size: 35px;
+      border-radius: 5px;
+      font-family: $title;
+      line-height: 0.8;
+      p{
+          // margin: 10px;
+          letter-spacing: 1px;
+      }
+      &--red{
+        color: $text;
+        padding: 0 10px !important;
+        background-color: $secondary-color;
+      }
+      &--1 {
+        position: relative;
+        left: -15%;
+        line-height: 1.3;
+      }
+      &--2 {
+        font-size: 40px;
+        transform: rotate(-1.5deg);
+        line-height: 0.5;
+      }
+    }
+  }
+  .es-cross {
+    background-image: url('../images/description-bg.png');  
+    &__title {
+      width: 100%;
+      text-align: center !important;
+    }
+    &__title {
+      animation: slideleft 1s ease forwards;
+    }
+    &__text{
+      text-align: center;
+      color: $text;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-3deg);
+      margin: 0 auto 10px !important;
+      font-size: 25px;
+      border-radius: 5px;
+      font-family: $title;
+      line-height: 1.3;
+      background-color: $secondary-color;
+      p{
+          letter-spacing: 1px;
+      }
+    }
+    &__badge {
+      position: absolute;
+      top: 0;
+      left: -60px;
+      color: $text;
+      width: max-content;
+      text-align: left;
+      font-size: 20px;
+      animation: slideleft 1s ease forwards;
+      font-family: $title;
+      & span {
+        line-height: 1.3;
+        padding: 2px 10px !important;
+        background-color: $secondary-color;
+        border-radius: 5px;
+        margin-left: -10px !important;
+      }
+      
+    }
+    &__head {
+      font-size: 18px !important;
+      font-weight: 900;
+    }
+    & table {
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none;
+      border-color: transparent !important;
+    }
+    & tbody {
+      background: linear-gradient(180deg, rgba(68,152,209,1) 0%, rgba(31,87,164,1) 100%);
+    }
+    & td, th {
+      min-width: 200px;
+      color: $text;
+      font-size: 14px !important;
+    }
+  }
+  .es-articles {
+    &__title {
+      width: 100%;
+      text-align: center !important;
+    }
+    &__title {
+      animation: slideleft 1s ease forwards;
+    }
+    &__text{
+      text-align: center;
+      color: $text;
+      width: max-content;
+      padding: 0 10px !important;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-3deg);
+      margin: 0 auto 10px !important;
+      font-size: 25px;
+      border-radius: 5px;
+      font-family: $title;
+      line-height: 1.3;
+      background-color: $secondary-color;
+      p{
+          letter-spacing: 1px;
+      }
+    }
+    &__text1 {
+      font-size: 18px !important;
+      color: $text-blue !important;
+    }
+    &__box {
+
+    }
+    &__subtitle {
+      font-size: 18px !important;
+      color: $text-blue !important;
+      font-weight: 500;
+    }
+    &__button {
+      text-decoration: none;
+      color: $text !important;
+      width: max-content;
+      padding: 5px 10px !important;
+      font-weight: 500;
+      margin-bottom: 10px !important;
+      font-size: 20px !important;
+      border-radius: 5px;
+      line-height: 1.3;
+      margin: 0 auto 10px !important;
+      background-color: $secondary-color;
+    }
+  }
+  .es-footer {
+    background-image: url('../images/description-bg.png');
+    &__text {
+      color: $text !important;
+      &--1{
+        font-size: 14px !important;
+      }
+      &--2{
+        font-size: 14px !important;
+        font-weight: 700;
+      }
+      &--3{
+        font-size: 32px !important;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.contents-25-icon {
+    display:block;
+    width: 50%;
+    padding:5%;
+    margin: 1em auto auto;
+    aspect-ratio: 1;
+    border-radius: 2000px;
+}
+
+@media (min-width:440px) {
+  .es-kv {
+    min-height: 350px !important;
+    &__text{
+      font-size: 24px !important;
+    }
+  } 
+}
+
+@media (min-width:576px) {
+  .es-kv {
+    min-height: 450px !important;
+    &__text{
+      font-size: 25px !important;
+    }
+  } 
+  .es-description {
+    &__text {
+      font-size: 40px !important;
+      &--blue {
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .es-kv {
+    min-height: 550px !important;
+    &__text{
+      font-size: 35px !important;
+      &__sup {
+        top: -20px !important;
+      }
+    }
+  } 
+  .es-why {
+    &__text {
+      font-size: 35px !important;
+      &--1 {
+
+      }
+      &--3 {
+        font-size: 45px !important;
+      }
+    }
+  }
+  .es-cross {
+    &__text {
+      font-size: 40px !important;
+    }
+  }
+  .es-articles {
+    &__text {
+      font-size: 40px !important;
+    }
+  }
+}
+
+@media (min-width:992px) {
+  .es-mobile-break {
+    display: none !important;
+  }
+  .es-kv {
+    &__title {
+      top: 30px;
+      left: 30px;
+    }
+    &__text{
+      font-size: 50px !important;
+      &__sup {
+        top: -30px !important;
+      }
+    }
+    &__packshot {
+      bottom: 0  !important;
+      right: 5%  !important;
+    }
+    &__background {
+      bottom: 0 !important;
+      right: 0  !important;
+    }
+  }
+  .es-cross{
+    &__badge {
+      left: -30px !important;
+    }
+    &__articles {
+      &:hover {
+        background-color: $text-black !important;
+      }
+    }
+  }  
+  .contents-25-icon {
+        width: 10%;
+    }
+}
