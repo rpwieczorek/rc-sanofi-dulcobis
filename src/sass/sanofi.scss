@@ -217,6 +217,7 @@ $text-black: #000;
     }
   }
   .es-why {
+    background-color: $main-color;
     &__title {
       width: 100%;
       text-align: center !important;
@@ -520,9 +521,6 @@ $text-black: #000;
   .es-description {
     &__text {
       font-size: 40px !important;
-      &--blue {
-        font-size: 30px !important;
-      }
     }
   }
 }
@@ -537,17 +535,6 @@ $text-black: #000;
       }
     }
   } 
-  .es-why {
-    &__text {
-      font-size: 35px !important;
-      &--1 {
-
-      }
-      &--3 {
-        font-size: 45px !important;
-      }
-    }
-  }
   .es-cross {
     &__text {
       font-size: 40px !important;
