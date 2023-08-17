@@ -216,6 +216,32 @@ $text-black: #000;
       padding-right: 15px;
     }
   }
+  .es-relief {
+    &__title {
+      color: #00604d !important;
+      font-size: 25px;
+      line-height: 1;
+      font-family: $title;
+      font-weight: 900;
+      text-transform: uppercase;
+      top: 40%;
+      left: 5%;
+      transform: translateY(-50%);
+      &--italic {
+        font-style: italic;
+      }
+      &--middle {
+        font-size: 45px;
+        color: $main-color !important;
+      }
+    }
+    &__mobile {
+      display: block;
+    }
+    &__desktop {
+      display: none;
+    }
+  }
   .es-why {
     background-color: $main-color;
     &__title {
@@ -498,6 +524,16 @@ $text-black: #000;
       font-size: 24px !important;
     }
   } 
+  .es-relief {
+    &__title {
+      font-size: 35px !important;
+      top: 48% !important;
+      transform: translateY(-50%);
+      &--middle {
+        font-size: 95px !important;
+      }
+    }
+  }
 }
 
 @media (min-width:576px) {
@@ -510,6 +546,20 @@ $text-black: #000;
   .es-description {
     &__text {
       font-size: 40px !important;
+    }
+  }
+  .es-relief {
+    &__title {
+      font-size: 22px !important;
+      &--middle {
+        font-size: 60px !important;
+      }
+    }
+    &__mobile {
+      display: none !important;
+    }
+    &__desktop {
+      display: block !important;
     }
   }
 }
@@ -532,6 +582,15 @@ $text-black: #000;
   .es-articles {
     &__text {
       font-size: 40px !important;
+    }
+  }
+  .es-relief {
+    &__title {
+      top: 40% !important;
+      font-size: 25px !important;
+      &--middle {
+        font-size: 70px !important;
+      }
     }
   }
 }
@@ -558,6 +617,15 @@ $text-black: #000;
     &__background {
       bottom: 0 !important;
       right: 0  !important;
+    }
+  }
+  .es-relief {
+    &__title {
+      top: 48% !important;
+      font-size: 35px !important;
+      &--middle {
+        font-size: 95px !important;
+      }
     }
   }
   .es-cross{
