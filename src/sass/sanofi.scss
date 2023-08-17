@@ -305,6 +305,7 @@ $text-black: #000;
     margin: 0 auto 64px;
     width: 100%;
     position: relative;
+    background-color: $main-color;
     &__container {
       margin: 0 auto;
       width: 100%;
@@ -326,35 +327,20 @@ $text-black: #000;
     }
     &__text{
       text-align: center;
-      color: $text-blue;
-      width: max-content;
+      color: $text;
       padding: 0 10px !important;
       text-transform: uppercase;
       font-weight: 900;
-      transform: rotate(-3deg);
       margin: 0 auto 10px !important;
       font-size: 35px;
-      border-radius: 5px;
       font-family: $title;
-      line-height: 0.8;
+      line-height: 1.2;
       p{
           // margin: 10px;
           letter-spacing: 1px;
       }
-      &--red{
-        color: $text;
-        padding: 0 10px !important;
-        background-color: $secondary-color;
-      }
-      &--1 {
-        position: relative;
-        left: -15%;
-        line-height: 1.3;
-      }
-      &--2 {
-        font-size: 40px;
-        transform: rotate(-1.5deg);
-        line-height: 0.5;
+      &--green{
+        color: #005649;
       }
     }
   }
