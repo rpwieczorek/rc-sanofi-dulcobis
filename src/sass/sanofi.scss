@@ -161,7 +161,7 @@ $text-black: #000;
   }
   .es-description {
     background: rgb(0,97,78);
-    background: linear-gradient(90deg, rgba(0,97,78,1) 0%, rgba(0,117,95,1) 50%, rgba(0,117,95,1) 100%);
+    background: linear-gradient(90deg, rgba(0,97,78,1) 0%, #007f67 100%);
     &__title {
       width: 100%;
       text-align: center !important;
@@ -263,41 +263,42 @@ $text-black: #000;
     }
   } 
   .es-dose {
-    background-color: $text-blue;
-    & table {
-      padding: 0 !important;
-      margin: 0 !important;
-      border-color: transparent !important;
-    }
-    &__odd {
-      background-color: $main-dark !important;
-    }
-    &__even {
-      background-color: $main-light !important;
-    }
+    background: rgb(0,97,78);
+    background: linear-gradient(90deg, rgba(0,97,78,1) 0%, #007f67 100%);
     &__box {
       padding: 0 !important;
-      background-color: $main-dark;
+      background-color: $main-color;
+      border-radius: 15px !important;
+    }
+    &__subtitleInBox {
+      color: $text !important;
+      padding: 20px 20px 10px!important;
+      font-weight: 700;
+      font-size: 20px !important;
+      font-family: $title;
+      line-height: 1.3;
+      &--noTopPadding {
+        padding: 0 20px 10px!important;
+      }
     }
     &__subtitle {
       color: $text !important;
-      width: max-content;
-      padding: 0 10px !important;
+      padding: 20px 20px 10px!important;
       text-transform: uppercase;
       font-weight: 900;
-      transform: rotate(-3deg);
-      margin-bottom: 10px !important;
       font-size: 35px !important;
-      border-radius: 5px;
       font-family: $title;
       line-height: 1.3;
-      margin: 0 auto 10px !important;
-      background-color: $secondary-color;
     }
-    & td {
-      color: $text;
-      text-align: left;
-      border:none;
+    &__text {
+      color: $text-black !important;
+      font-weight: 300;
+      font-size: 16px !important;
+      line-height: 1.3;
+    }
+    &__textUnderBox {
+      font-size: 14px !important;
+      color: $text !important;
     }
   } 
   .es-video {
