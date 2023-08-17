@@ -410,6 +410,7 @@ $text-black: #000;
     }
   }
   .es-articles {
+    background-color: $main-color;
     &__title {
       width: 100%;
       text-align: center !important;
@@ -419,33 +420,34 @@ $text-black: #000;
     }
     &__text{
       text-align: center;
-      color: $text;
+      color: #00604d;
       width: max-content;
       padding: 0 10px !important;
       text-transform: uppercase;
       font-weight: 900;
-      transform: rotate(-3deg);
       margin: 0 auto 10px !important;
-      font-size: 25px;
+      font-size: 35px;
       border-radius: 5px;
       font-family: $title;
       line-height: 1.3;
-      background-color: $secondary-color;
       p{
           letter-spacing: 1px;
       }
     }
     &__text1 {
       font-size: 18px !important;
-      color: $text-blue !important;
+      color: #005649 !important;
+      font-weight: 200;
     }
     &__box {
 
     }
     &__subtitle {
       font-size: 18px !important;
-      color: $text-blue !important;
-      font-weight: 500;
+      color: #00604d !important;
+      font-weight: 700 !important;
+      max-width: 360px;
+      margin: 0 auto !important;
     }
     &__button {
       text-decoration: none;
