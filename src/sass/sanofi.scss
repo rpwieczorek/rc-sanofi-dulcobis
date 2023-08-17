@@ -29,29 +29,30 @@ body {
   margin: 0 auto;
 }  
 
-@keyframes slideright {
+@keyframes slidedown {
   from {
     opacity: 0.3;
-    transform: translateX(100px);
+    transform: translateY(100px);
    
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
    
   }
 }
-
-@keyframes slideleft {
-  from {
-    opacity: 0.3;
-    transform: translateX(-100px);
-   
+@keyframes pulse {
+  0% {
+    transform: scaleX(1)
+  }
+  10% {
+    transform: scale3d(1.2, 1.2, 1.2)
+  }
+  20% {
+    transform: scaleX(1)
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
-   
+    transform: scaleX(1)
   }
 }
 $regular: 'Montserrat, sans-serif';
@@ -104,7 +105,7 @@ $text-black: #000;
       position: absolute;
       top: 30px;
       left: 15px;
-      animation: slideleft 1s ease forwards;
+      animation: slidedown 1s ease forwards;
     }
     &__text{
       color: $text;
@@ -141,6 +142,7 @@ $text-black: #000;
       position: absolute;
       bottom: -10%;
       right: 0;
+      animation: slidedown 1s ease forwards;
     }
   }
   .es-features {
@@ -165,7 +167,6 @@ $text-black: #000;
     &__title {
       width: 100%;
       text-align: center !important;
-      animation: slideleft 1s ease forwards;
     }
     &__text{
       text-align: center;
@@ -214,6 +215,19 @@ $text-black: #000;
     }
     &__bullet {
       padding-right: 15px;
+      animation: pulse 5s infinite;
+      &--2 {
+        animation-delay: 1s;
+      }
+      &--3 {
+        animation-delay: 2s;
+      }
+      &--4 {
+        animation-delay: 3s;
+      }
+      &--5 {
+        animation-delay: 4s;
+      }
     }
   }
   .es-relief {
@@ -247,7 +261,6 @@ $text-black: #000;
     &__title {
       width: 100%;
       text-align: center !important;
-      animation: slideleft 1s ease forwards;
     }
     &__text{
       text-align: center;
@@ -349,7 +362,6 @@ $text-black: #000;
       z-index: 1;
     }
     &__title {
-      animation: slideleft 1s ease forwards;
     }
     &__text{
       text-align: center;
@@ -376,7 +388,6 @@ $text-black: #000;
       text-align: center !important;
     }
     &__title {
-      animation: slideleft 1s ease forwards;
     }
     &__text{
       text-align: center;
@@ -442,7 +453,6 @@ $text-black: #000;
       text-align: center !important;
     }
     &__title {
-      animation: slideleft 1s ease forwards;
     }
     &__text{
       text-align: center;
