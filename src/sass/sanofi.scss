@@ -421,7 +421,6 @@ $text-black: #000;
     &__text{
       text-align: center;
       color: #00604d;
-      width: max-content;
       padding: 0 10px !important;
       text-transform: uppercase;
       font-weight: 900;
@@ -464,9 +463,9 @@ $text-black: #000;
     }
   }
   .es-footer {
-    background-image: url('../images/description-bg.png');
+
     &__text {
-      color: $text !important;
+      color: $text-black !important;
       &--1{
         font-size: 14px !important;
       }
@@ -477,6 +476,7 @@ $text-black: #000;
       &--3{
         font-size: 32px !important;
         font-weight: 700;
+        color: #00604d !important;
       }
     }
   }
