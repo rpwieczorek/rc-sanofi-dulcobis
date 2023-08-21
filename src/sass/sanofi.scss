@@ -1,12 +1,12 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.ttf") format("opentype");
-  }
-@font-face {
-  font-family: "MuseoSans";
-  src: url("../fonts/MuseoSans-900.otf") format("opentype");
-  }
+// @font-face {
+//   font-family: "Montserrat";
+//   src: url("../fonts/Montserrat-Regular.ttf") format("opentype");
+//   }
+// @font-face {
+//   font-family: "MuseoSans";
+//   src: url("../fonts/MuseoSans-900.otf") format("opentype");
+//   }
 
 html,
 body {
@@ -66,8 +66,9 @@ body {
     transform: scaleX(1)
   }
 }
-$regular: 'Montserrat, sans-serif';
-$title: 'MuseoSans';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$regular: 'Montserrat';
+$title: 'Montserrat';
 $main-color: #a1bd39;
 $main-dark: #19428f;
 $main-light: #1b4a97;
@@ -568,6 +569,9 @@ $text-black: #000;
     min-height: 350px !important;
     &__text{
       font-size: 35px !important;
+      &__sup {
+        top: -20px !important;
+      }
     }
   } 
   .es-relief {
@@ -584,7 +588,11 @@ $text-black: #000;
 @media (min-width:510px) {
   .es-kv {
     &__text{
-      font-size: 40px !important;
+      font-size: 37px !important;
+      &--green {
+        font-size: 50px !important;
+      }
+
     }
   }
 }
@@ -594,6 +602,9 @@ $text-black: #000;
     min-height: 450px !important;
     &__text{
       font-size: 25px !important;
+      &__sup {
+        top: -10px !important;
+      }
     }
     &__mobile {
       display: none !important;
@@ -683,9 +694,12 @@ $text-black: #000;
       left: 30px;
     }
     &__text{
-      font-size: 50px !important;
+      font-size: 40px !important;
+      &--green{
+        font-size: 48px !important;
+      }
       &__sup {
-        top: -30px !important;
+        top: -23px !important;
       }
     }
     &__packshot {
