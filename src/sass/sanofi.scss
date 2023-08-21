@@ -1,12 +1,4 @@
 @charset "UTF-8";
-// @font-face {
-//   font-family: "Montserrat";
-//   src: url("../fonts/Montserrat-Regular.ttf") format("opentype");
-//   }
-// @font-face {
-//   font-family: "MuseoSans";
-//   src: url("../fonts/MuseoSans-900.otf") format("opentype");
-//   }
 
 html,
 body {
@@ -332,9 +324,9 @@ $text-black: #000;
     }
     &__subtitleInBox {
       color: $text !important;
-      padding: 20px 20px 10px!important;
-      font-weight: 700;
-      font-size: 20px !important;
+      padding: 20px 10px 10px!important;
+      font-weight: 700 !important;
+      font-size: 23px !important;
       font-family: $title;
       line-height: 1.3;
       &--noTopPadding {
@@ -343,17 +335,17 @@ $text-black: #000;
     }
     &__subtitle {
       color: $text !important;
-      padding: 20px 20px 10px!important;
+      padding: 30px 20px 10px!important;
       text-transform: uppercase;
-      font-weight: 900;
-      font-size: 35px !important;
+      font-weight: 700 !important;
+      font-size: 38px !important;
       font-family: $title;
       line-height: 1.3;
     }
     &__text {
       color: $text-black !important;
       font-weight: 400;
-      font-size: 16px !important;
+      font-size: 20px !important;
       line-height: 1.3;
     }
     &__textUnderBox {
@@ -389,9 +381,9 @@ $text-black: #000;
       color: $text;
       padding: 0 10px !important;
       text-transform: uppercase;
-      font-weight: 900;
+      font-weight: 700 !important;
       margin: 0 auto 10px !important;
-      font-size: 35px;
+      font-size: 38px;
       font-family: $title;
       line-height: 1.2;
       p{
@@ -415,9 +407,9 @@ $text-black: #000;
       color: #005649;
       padding: 0 10px !important;
       text-transform: uppercase;
-      font-weight: 900;
+      font-weight: 700 !important;
       margin: 0 auto 10px !important;
-      font-size: 35px;
+      font-size: 38px;
       font-family: $title;
       line-height: 1.3;
       p{
@@ -438,8 +430,14 @@ $text-black: #000;
       font-weight: 500;
     }
     &__head {
-      font-size: 18px !important;
+      font-size: 20px !important;
       font-weight: 800;
+    }
+    &__image {
+      max-height: 150px;
+    }
+    &__emptyImage {
+      height: 160px;
     }
     & table {
       padding: 0 !important;
@@ -470,7 +468,7 @@ $text-black: #000;
     & th {
       vertical-align: middle;
       border: none !important;
-      min-width: 150px;
+      min-width: 110px;
       color: #005649;
       font-size: 14px !important;
       font-weight: 500;
@@ -489,9 +487,10 @@ $text-black: #000;
       color: #00604d;
       padding: 0 10px !important;
       text-transform: uppercase;
-      font-weight: 900;
+      font-weight: 700 !important
+      ;
       margin: 0 auto 10px !important;
-      font-size: 35px;
+      font-size: 37px;
       border-radius: 5px;
       font-family: $title;
       line-height: 1.3;
@@ -661,8 +660,11 @@ $text-black: #000;
     }
   }
   .es-cross {
-    &__text {
-      font-size: 38px !important;
+    &__image {
+      max-height: 200px !important;
+    }
+    &__emptyImage {
+      height: 214px !important;
     }
   }
   .es-articles {
